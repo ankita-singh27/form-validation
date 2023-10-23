@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation </title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="signup-header">
+          <h1>Signup</h1>
+        </header>
+        <main class="signup-body">
+          <form  id="form">
+
+            <p>
+              <label for="name">Full Name</label>
+              <input type="text" placeholder="Type Name Here"  id="name" onkeyup= "validateName()"/>
+              <i class="fa-solid"></i>
+              <span id="nameError"></span>
+            </p>
+
+            <p>
+              <label for="phoneno">Phone no</label>
+              <input
+                type="number" id="phoneno" placeholder="phone no"  
+                 onkeyup= "validatePhoneNo()"/>
+                <i class="fa-solid"></i>
+                <span id="phoneError"></span>
+            </p>
+
+            <p>
+              <label for="email">Email</label>
+              <input type="email" placeholder="xyz@gmail.com"
+               id="email" onkeyup= "validateEmail()" />
+              <i class="fa-solid"></i>
+              <span id="emailError"></span>
+            </p>
+
+            <p>
+              <label for="password">Password</label>
+              <input
+                type="password" placeholder="at least 8 characters"
+                 id="password" onkeyup= "validatePassword()"/>
+                <i class="fa-solid" ></i>
+                <span id="passError"></span>
+            </p>
+
+            <p>
+              <label for="confirmpassword">Confirm Password</label>
+              <input
+                type="password" 
+                id="confirmpassword" onkeyup= "validateConfirmPassword()"/>
+                <i class="fa-solid"></i>
+                <span id="confirmpassError"></span>
+            </p>
+
+            <p>
+              <input type="submit" value="Create Account" id="submitBtn" />
+              <span id="submitError"></span>
+            </p>
+
+          </form>
+        </main>
+        <footer class="signup-footer">
+          <p>Already have an account? <a href="">Login</a></p>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+  <!-- Add Script file of font awsome to access the icons -->
+</html>
